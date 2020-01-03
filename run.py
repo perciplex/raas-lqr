@@ -46,7 +46,7 @@ env.reset()
 N_steps = 1000
 
 observation = env.reset()
-#observation, reward, done, info = env.step([2])
+observation, reward, done, info = env.step([2])
 time.sleep(1)
 
 for t in range(N_steps):
@@ -62,7 +62,7 @@ for t in range(N_steps):
     
     print(action, observation, E(observation) - Ed)
     #env.render()
-    observation, reward, done, info = env.step([0])
+    observation, reward, done, info = env.step([action])
 
 
 print("\nDone!")
